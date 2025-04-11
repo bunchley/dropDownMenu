@@ -46,6 +46,17 @@ img {
   font-family: inherit;
   margin: 0;
 }
+.drop1,
+.drop2 {
+  /* width: 35px; */
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.drop2 {
+  transform: translate(0, 11px) rotate(90deg);
+}
 
 /* Style the dropdown content (hidden by default) */
 .dropdown-content {
@@ -70,7 +81,6 @@ img {
 /* Add a dark background on topnav links and the dropdown button on hover */
 .topnav a:hover,
 .dropdown:hover .dropbtn {
-  background-color: #555;
   color: white;
 }
 
@@ -85,9 +95,10 @@ img {
   display: block;
 }
 
+/* .topnav a:not(:first-child), - this displays Home if added below */
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child),
+  .topnav a,
   .dropdown .dropbtn {
     display: none;
   }
@@ -95,6 +106,11 @@ img {
     float: right;
     display: block;
     cursor: pointer;
+    padding: 0;
+    padding-right: 5px;
+    padding-top: 5px;
+    /* background-color: #555; */
+    /* background-color: #04aa6d; */
   }
   .bar1,
   .bar2,
